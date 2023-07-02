@@ -74,6 +74,11 @@
 - [useLoaderData](https://reactrouter.com/en/main/hooks/use-loader-data)
   
   ```js
+  export async function loaderFunction() {
+    //..
+    return data
+  }
+  
   const Component = () => {
    const { data } = useLoaderData();
   }
@@ -95,3 +100,17 @@
   ```
 
   Configure the loader on the route
+
+### [Creating Data](https://reactrouter.com/en/main/start/tutorial#creating-contacts)
+
+- [Form](https://reactrouter.com/en/main/components/form)
+
+  Change <form> to a React Router <Form>
+
+  ```js
+  <Form method="post">
+    <button type="submit">New</button>
+  </Form>
+  ```
+
+  
