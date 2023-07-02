@@ -21,6 +21,8 @@
     },
   ]);
   ```
+  We need to nest routes to render the components inside of each other, rendering components inside `<Root>` by making the paths route a _child_ of the root route.
+  
 - [RouterProvider](https://reactrouter.com/en/main/routers/router-provider)
   ```js
   ReactDOM.createRoot(document.getElementById("root")).render(
