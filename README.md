@@ -22,6 +22,15 @@
   ]);
   ```
   We need to nest routes to render the components inside of each other, rendering components inside `<Root>` by making the paths route a _child_ of the root route.
+  - [Outlet](https://reactrouter.com/en/main/components/outlet)
+
+    to tell the root route where we want it to render its child routes.
+
+    ```js
+    <div id="detail">
+      <Outlet />
+    </div>
+    ```
   
 - [RouterProvider](https://reactrouter.com/en/main/routers/router-provider)
   ```js
