@@ -76,7 +76,7 @@
   ```js
   export async function loaderFunction() {
     //..
-    return data
+    return { data }
   }
   
   const Component = () => {
@@ -94,7 +94,7 @@
       path: "/",
       element: <Root />,
       errorElement: <ErrorPage />,
-      loader: loaderFunction
+      loader: loaderFunction // ++
     },
   ]);
   ```
@@ -105,12 +105,34 @@
 
 - [Form](https://reactrouter.com/en/main/components/form)
 
-  Change <form> to a React Router <Form>
+  Change `<form>` to a React Router `<Form>`
 
   ```js
+  export async function actionFunction() {
+    //..
+    return { data };
+  }
+  
   <Form method="post">
     <button type="submit">New</button>
   </Form>
   ```
 
+  `<Form>` prevents the browser from sending the request to the server and sends it to the route action instead.
+  
+- [action](https://reactrouter.com/en/main/route/action)
+
+  ```js
+   const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Root />,
+      errorElement: <ErrorPage />,
+      loader: loaderFunction,
+      action: actionFunction // ++
+    },
+  ]);
+  ```
+
+  set the action on the route
   
