@@ -129,6 +129,28 @@
   ```
 
   `<Form>` prevents the browser from sending the request to the server and sends it to the route action instead.
+
+  - [useSubmit](https://reactrouter.com/en/main/hooks/use-submit)
+
+    ```js
+    import { useSubmit, Form } from "react-router-dom";
+
+    function SearchField() {
+      let submit = useSubmit();
+      return (
+        <Form
+          onChange={(event) => {
+            submit(event.currentTarget);
+          }}
+        >
+          <input type="text" name="search" />
+          <button type="submit">Search</button>
+        </Form>
+      );
+    }
+    ```
+
+    submit the form every time a value changes inside the form
   
 - [action](https://reactrouter.com/en/main/route/action)
 
