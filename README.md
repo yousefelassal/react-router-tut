@@ -200,5 +200,20 @@
       </button>;
   }
   ```
-  
+
   a simple submit button that changes its text & className when the navigation state is changing
+  
+- [useNavigate](https://reactrouter.com/en/main/hooks/use-navigate)
+  
+  ```js
+  const navigate = useNavigate();
+  <button
+    type="button"
+    onClick={() => {
+      navigate(-1);
+    }}
+  >
+  ```
+  
+  this would do the same thing as the browser's back button.
+  
