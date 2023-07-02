@@ -40,3 +40,13 @@
     console.error(error.statusText);
   }
   ```
+  Set the `<ErrorPage>` as the errorElement on the root route
+  ```js
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Root />,
+      errorElement: <ErrorPage />, // ++
+    },
+  ]);
+  ```
