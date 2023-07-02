@@ -151,3 +151,44 @@
   ```
 
   The `redirect` helper makes it easier to return a response that tells the app to change locations.
+- [NavLink](https://reactrouter.com/en/main/components/nav-link)
+  
+  ```js
+  import { NavLink } from "react-router-dom";
+
+  <NavLink
+    to="/messages"
+    className={({ isActive, isPending }) =>
+      isPending ? "pending" : isActive ? "active" : ""
+    }
+  >
+    Messages
+  </NavLink>;
+  ```
+  `<NavLink>` is a special kind of `<Link>` that knows whether or not it is "active" or "pending".
+- [useNavigation](https://reactrouter.com/en/main/hooks/use-navigation)
+  
+  ```js
+  function SubmitButton() {
+    const navigation = useNavigation();
+  
+    const text =
+      navigation.state === "submitting"
+        ? "Saving..."
+        : navigation.state === "loading"
+        ? "Saved!"
+        : "Go";
+  
+    return
+      <button
+        type="submit"
+        className={
+          navigation.state === "loading" ? "loading" : ""
+        }
+      >
+        {text}
+      </button>;
+  }
+  ```
+  
+  a simple submit button that changes its text & className when the navigation state is changing
