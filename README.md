@@ -50,3 +50,14 @@
     },
   ]);
   ```
+### [Client Side Routing](https://reactrouter.com/en/main/start/tutorial#client-side-routing)
+
+- [Link](https://reactrouter.com/en/main/components/link)
+
+  Change `<a href>` to `<Link to>`
+    
+    ```js
+    <Link to={/* url path */}>link</Link>
+
+    <Link to={/* relative path */} relative="path">link</Link>
+    ```
