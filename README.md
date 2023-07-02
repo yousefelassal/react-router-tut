@@ -70,3 +70,28 @@
 
     <Link to={/* relative path */} relative="path">link</Link>
     ```
+### [Loading Data](https://reactrouter.com/en/main/start/tutorial#loading-data)
+- [useLoaderData](https://reactrouter.com/en/main/hooks/use-loader-data)
+  
+  ```js
+  const Component = () => {
+   const { data } = useLoaderData();
+  }
+  ```
+
+  useLoaderData hook is updated and the UI stays in sync with the data automatically!
+
+- [loader](https://reactrouter.com/en/main/route/loader)
+
+  ```js
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Root />,
+      errorElement: <ErrorPage />,
+      loader: loaderFunction
+    },
+  ]);
+  ```
+
+  Configure the loader on the route
