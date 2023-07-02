@@ -135,4 +135,19 @@
   ```
 
   set the action on the route
-  
+
+### [Redirecting](https://reactrouter.com/en/main/start/tutorial#redirecting-new-records-to-the-edit-page)
+- [redirect](https://reactrouter.com/en/main/fetch/redirect)
+  ```js
+  import { redirect } from "react-router-dom";
+
+  const loader = async () => {
+    const user = await getUser();
+    if (!user) {
+      return redirect("/login");
+    }
+    return null;
+  };
+  ```
+
+  The `redirect` helper makes it easier to return a response that tells the app to change locations.
