@@ -151,3 +151,17 @@
   ```
 
   The `redirect` helper makes it easier to return a response that tells the app to change locations.
+- [NavLink](https://reactrouter.com/en/main/components/nav-link)
+  ```js
+  import { NavLink } from "react-router-dom";
+
+  <NavLink
+    to="/messages"
+    className={({ isActive, isPending }) =>
+      isPending ? "pending" : isActive ? "active" : ""
+    }
+  >
+    Messages
+  </NavLink>;
+  ```
+  `<NavLink>` is a special kind of `<Link>` that knows whether or not it is "active" or "pending".
