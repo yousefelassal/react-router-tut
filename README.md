@@ -31,6 +31,16 @@
       <Outlet />
     </div>
     ```
+    - [Index Route](https://reactrouter.com/en/main/start/tutorial#index-routes)
+      ```js
+      children: [
+        { index: true, element: <Index /> },
+        /* existing routes */
+      ],
+      ```
+
+      When a route has children, and you're at the parent route's path, the `<Outlet>` has nothing to render because no children match.
+      The { index:true } instead of { path: "" } tells the router to match and render this route when the user is at the parent route's exact path
   
 - [RouterProvider](https://reactrouter.com/en/main/routers/router-provider)
   ```js
