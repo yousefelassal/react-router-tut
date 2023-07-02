@@ -84,7 +84,7 @@
   }
   ```
 
-  useLoaderData hook is updated and the UI stays in sync with the data automatically!
+  after route actions are called useLoaderData hook is updated and the UI stays in sync with the data automatically!
 
 - [loader](https://reactrouter.com/en/main/route/loader)
 
